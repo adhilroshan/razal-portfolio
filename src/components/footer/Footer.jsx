@@ -5,7 +5,7 @@ const Footer = () => {
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
             <a
-              href="#"
+              href="#about"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
                 About
@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
           <div className="px-5 py-2">
             <a
-              href="#"
+              href="#services"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
              Services
@@ -21,7 +21,7 @@ const Footer = () => {
           </div>
           <div className="px-5 py-2">
             <a
-              href="#"
+              href="#portfolio"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
               Portfolio
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <div className="px-5 py-2">
             <a
-              href="#"
+              href="#contact"
               className="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
               Contact
