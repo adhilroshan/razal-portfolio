@@ -74,7 +74,7 @@ const Hero = () => {
         Visionary Entrepreneur Compassionate Innovative
       </motion.div>
       <div className="imageContainer">
-        <img src="/hero.webp" alt="" />
+        <img src="/hero.webp"  alt="" />
       </div>
     </div>
   );

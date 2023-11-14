@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./services.scss";
-import { motion, useInView } from "framer-motion";
+import { color, motion, useInView } from "framer-motion";
 
 const variants = {
   initial: {
@@ -20,6 +20,29 @@ const variants = {
 };
 
 const Services = () => {
+  const services = [
+    {
+      title: "Branding",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum libero enim nisi aliquam consectetur expedita magni eius ex corrupti animi! Ad nam pariatur assumenda quae mollitia libero repellat explicabo maiores?",
+    },
+    {
+      title: "Branding",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum libero enim nisi aliquam consectetur expedita magni eius ex corrupti animi! Ad nam pariatur assumenda quae mollitia libero repellat explicabo maiores?",
+    },
+    {
+      title: "Branding",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum libero enim nisi aliquam consectetur expedita magni eius ex corrupti animi! Ad nam pariatur assumenda quae mollitia libero repellat explicabo maiores?",
+    },
+    {
+      title: "Branding",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum libero enim nisi aliquam consectetur expedita magni eius ex corrupti animi! Ad nam pariatur assumenda quae mollitia libero repellat explicabo maiores?",
+    },
+    // Add more services as needed
+  ];
   const ref = useRef();
 
   const isInView = useInView(ref, { margin: "-100px" });
@@ -52,64 +75,23 @@ const Services = () => {
         <div className="title">
           <h1>
             Transforming{" "}
-            <motion.b whileHover={{ color: "orange" }}>Lives</motion.b>
+            <motion.b style={{color:"#f1f1f1"}} whileHover={{ color: "orange" }}>Lives</motion.b>
           </h1>
-          <button>WHAT WE DO?</button>
+          <button>WHAT I DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
-          </p>
-          <button>Go</button>
-        </motion.div>
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="box"
+            whileHover={{ background: "lightgray", color: "#1b1b1b" }}
+          >
+            <h2>{service.title}</h2>
+            <p>{service.description}</p>
+            <button>Go</button>
+          </motion.div>
+        ))}
       </motion.div>
     </motion.div>
   );

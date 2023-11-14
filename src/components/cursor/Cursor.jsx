@@ -20,7 +20,11 @@ const Cursor = () => {
   return (
     <motion.div
       className="cursor"
-      animate={{ x: position.x+10, y: position.y+10 }}
+      whileTap={({ scale: 0.9 }, { backgroundColor: "white" })}
+      animate={{
+        x: `calc(${position.x}px - 50%)`,
+        y: `calc(${position.y}px - 50%)`,
+      }}
     ></motion.div>
   );
 };
