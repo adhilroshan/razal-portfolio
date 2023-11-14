@@ -22,6 +22,7 @@ a {
 
 section {
   height: 100vh;
+  min-height: fit-content;
   width: 100%;
   scroll-snap-align: center;
   overflow: hidden;
@@ -42,3 +43,6 @@ section {
     @content;
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

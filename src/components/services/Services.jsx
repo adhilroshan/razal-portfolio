@@ -80,7 +80,7 @@ const Services = () => {
           <button>WHAT I DO?</button>
         </div>
       </motion.div>
-      <motion.div className="listContainer" variants={variants}>
+      {/* <motion.div className="listContainer" variants={variants}>
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -92,7 +92,7 @@ const Services = () => {
             <button>Go</button>
           </motion.div>
         ))}
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };

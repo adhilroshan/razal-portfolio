@@ -19,7 +19,7 @@ const Cursor = () => {
 
   return (
     <motion.div
-      className="cursor"
+      className="hidden md:block cursor"
       whileTap={({ scale: 0.9 }, { backgroundColor: "white" })}
       animate={{
         x: `calc(${position.x}px - 50%)`,

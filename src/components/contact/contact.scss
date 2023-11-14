@@ -1,6 +1,10 @@
 @import "../../app.scss";
 
 .contact {
+  width: 100%;
+  min-width: fit-content;
+  scroll-snap-align: end !important;
+  overflow: hidden;
   height: 100%;
   max-width: 1366px;
   margin: auto;
